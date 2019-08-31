@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg_color"
+    android:orientation="vertical"
+    tools:context=".rework.ReworkActivity">
+
+    <include layout="@layout/top_layout" />
+
+    <EditText
+        android:id="@+id/et_sbarCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="二维码输入"
+        android:nextFocusDown="@id/et_sbarCode"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/default_text_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_93"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="修补时间："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入修补时间"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14"
+                android:background="@null"
+                android:textColor="@color/default_text_color"
+                android:inputType="number|numberDecimal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:text="小时"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_10"
+
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="修补人员："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_worker"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请选择修补人员"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/default_text_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_3"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:text="产品编号:"
+            android:textColor="@color/default_content_color"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:singleLine="true"
+            android:text="产品名称:"
+            android:textColor="@color/default_content_color"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sbarcode"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="产品条码:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="花本型号:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_check_worker"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="验布人员:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_length"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="毛米数:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_error_length"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="疵点米数:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tv_error_num"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="疵点数:"
+                android:textColor="@color/default_content_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="108dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/bottom_delete"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</FrameLayout>
